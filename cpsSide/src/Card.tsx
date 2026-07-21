@@ -1,15 +1,15 @@
 import './App.css'
 type Data = {
-    header:string,
-    value:number
+    headers:string[],
+    values:number[]
 }
-export default function Card({header,value}:Data){
+export default function Card({headers,values}:Data){
     return (
-        <div className='font-mono w-full p-2 border border-black rounded-lg'>
             <div className='flex justify-center items-center flex-col'>
-                <h3>{header}</h3>
-                <h4>{value}</h4>
+                <h2>Your results:</h2>
+                {headers.map((val,idx)=>(
+                    <p>{val} : {values[idx]}</p>
+                ))}
             </div>
-        </div>
     )
 }
