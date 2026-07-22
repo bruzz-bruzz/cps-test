@@ -17,7 +17,7 @@ export default function App(){
       })
     },100)
     setTimeout(()=>{
-      const bruh = prevTotalClicks
+      setPrevTotalClicks(prevTotalClicks)
       setRunning(false)
       setDone(true)
       clearInterval(interval)
