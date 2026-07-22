@@ -1,52 +1,82 @@
-# React + TypeScript + Vite
+# CPS Test - Frontend Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The frontend application for the CPS (Clicks Per Second) Testing Tool.
 
-Currently, two official plugins are available:
+## What is CPS?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+CPS (Clicks Per Second) is a measure of how many times per second a user can click their mouse. This application allows you to test your clicking speed and see your results in real-time.
+
+## Features
+
+- **Real-time CPS Calculation**: Monitor your clicks per second as you test
+- **Adjustable Duration**: Choose how long you want to test (in seconds)
+- **Click Counter**: Track total clicks during your test
+- **Responsive Design**: Works on desktop and tablet devices
+- **Modern Stack**: Built with React 19, TypeScript, and Tailwind CSS
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18 or higher
+- npm or yarn
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development Server
+
+```bash
+npm run dev
+```
+
+Open your browser and navigate to `http://localhost:5173` to see the application.
+
+### Production Build
+
+```bash
+npm run build
+```
+
+Builds the application for production to the `dist/` folder.
+
+### Preview Build
+
+```bash
+npm run preview
+```
+
+Locally preview the production build.
+
+### Lint
+
+```bash
+npm run lint
+```
+
+Run ESLint to check for code quality issues.
+
+## Components
+
+- **App.tsx** - Main application component with test logic
+- **Card.tsx** - Reusable card component for displaying information
+- **Github.tsx** - GitHub link component
+
+## Styling
+
+This project uses Tailwind CSS for styling. The configuration is in `tailwind.config.js`.
+
+## TypeScript
+
+The project is fully typed with TypeScript. Check `tsconfig.json` for compiler options.
 
 ## React Compiler
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+The React Compiler is enabled by default for better performance optimization. This helps identify potential bugs and optimize component rendering automatically.
 
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js
 // eslint.config.js
