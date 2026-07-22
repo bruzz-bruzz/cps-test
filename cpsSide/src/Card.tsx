@@ -8,7 +8,7 @@ export default function Card({headers,values}:Data){
             <div className='flex justify-center items-center flex-col'>
                 <h2>Your results:</h2>
                 {headers.map((val,idx)=>(
-                    <p>{val} : {values[idx]}</p>
+                    <p key={idx}>{val} : {values[idx]}</p>
                 ))}
             </div>
     )
