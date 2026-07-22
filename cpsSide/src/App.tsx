@@ -83,7 +83,7 @@ export default function App(){
           </div>
         )}
       </div>
-      <Github url={"bruh"} />
+      <Github url={"https://github.com/bruzz-bruzz/cps-test"} />
     </div>
   )
 }
