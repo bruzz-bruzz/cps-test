@@ -9,7 +9,6 @@ export default function App(){
   const [totalClicks,setTotalClicks] = useState(0)
   const [prevTotalClicks,setPrevTotalClicks] = useState(0)
   const [running,setRunning] = useState(false)
-  const [clicked,setClicked] = useState(false)
   const [done,setDone] = useState(false)
   function startTest(){
     const interval = setInterval(()=>{
@@ -18,6 +17,7 @@ export default function App(){
       })
     },100)
     setTimeout(()=>{
+      const bruh = prevTotalClicks
       setRunning(false)
       setDone(true)
       clearInterval(interval)
